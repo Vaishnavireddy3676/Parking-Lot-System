@@ -16,33 +16,28 @@ function ParkVehicle({ refreshSlots, setTicket }) {
         setMessage("");
 
         try {
-
-            const res = await api.post("/park", {
-                vehicleNumber,
-                vehicleType
-            });
-
-            setTicket(res.data.ticket);
-
-            setMessage("Ticket Generated Successfully");
-
-            setVehicleNumber("");
-            setVehicleType("car");
-
-            refreshSlots();
-
-        }catch (error) {
-    console.error("PARK ERROR:", error);
-
-    res.status(500).json({
-        success: false,
-        message: error.message,
-        detail: error.detail
+    const res = await api.post("/park", {
+        vehicleNumber,
+        vehicleType
     });
+
+    setTicket(res.data.ticket);
+    setMessage("Ticket Generated Successfully");
+    setVehicleNumber("");
+    setVehicleType("car");
+    refreshSlots();
+
+} catch (error) {
+    console.error(error);
+
+    setMessage(
+        error.response?.data?.message ||
+        error.message ||
+        "Server Error"
+    );
+} finally {
+    setLoading(false);
 }
-
-        setLoading(false);
-
     };
 
     return (

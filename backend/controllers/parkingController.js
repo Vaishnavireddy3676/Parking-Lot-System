@@ -41,11 +41,13 @@ const getSlots = async(req, res) => {
 
     } catch (error) {
 
-        console.log(error);
+        console.error(error);
 
         res.status(500).json({
             success: false,
-            message: "Server Error"
+            message: error.message,
+            detail: error.detail,
+            code: error.code
         });
 
     }
