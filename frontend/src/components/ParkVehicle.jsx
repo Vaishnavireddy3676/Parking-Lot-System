@@ -31,15 +31,15 @@ function ParkVehicle({ refreshSlots, setTicket }) {
 
             refreshSlots();
 
-        } catch (err) {
+        }catch (error) {
+    console.error("PARK ERROR:", error);
 
-            setTicket(null);
-
-            setMessage(
-                err.response?.data?.message || "Server Error"
-            );
-
-        }
+    res.status(500).json({
+        success: false,
+        message: error.message,
+        detail: error.detail
+    });
+}
 
         setLoading(false);
 
