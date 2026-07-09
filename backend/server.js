@@ -20,8 +20,10 @@ app.get("/", async(req, res) => {
             time: result.rows[0].now
         });
     } catch (err) {
+        console.error(err);
+
         res.status(500).json({
-            error: "Database Connection Failed"
+            error: err.message
         });
     }
 });
