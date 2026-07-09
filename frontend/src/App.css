@@ -1,0 +1,466 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, Segoe UI, Arial, sans-serif;
+}
+
+body {
+    background: #f3f6fb;
+    color: #222;
+}
+
+.dashboard {
+    width: 95%;
+    max-width: 1450px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.header p {
+    color: #6b7280;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+
+/* ===========================
+   SUMMARY
+=========================== */
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.summary h2 {
+    font-size: 24px;
+    color: #111827;
+}
+
+.summary span {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ===========================
+   AVAILABILITY CARDS
+=========================== */
+
+.availability-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.availability-card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .08);
+    transition: .25s;
+}
+
+.availability-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+}
+
+.title {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icon-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}
+
+.title h3 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.title small {
+    color: #6b7280;
+}
+
+.badge {
+    padding: 8px 14px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.available {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.full {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.card-body {
+    margin-bottom: 25px;
+}
+
+.number {
+    font-size: 52px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.text {
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+
+/* ===========================
+   PROGRESS BAR
+=========================== */
+
+.progress-bar {
+    width: 100%;
+    height: 9px;
+    background: #edf1f5;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 50px;
+    transition: .4s;
+}
+
+
+/* ===========================
+   CARD COLORS
+=========================== */
+
+.bike {
+    background: #2563eb;
+}
+
+.car {
+    background: #7c3aed;
+}
+
+.truck {
+    background: #ea580c;
+}
+
+
+/* ===========================
+   FORMS LAYOUT
+=========================== */
+
+.forms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+
+/* ===========================
+   FORM CARDS
+=========================== */
+
+.form-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .08);
+}
+
+.form-card h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #111827;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 22px;
+    font-size: 14px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.form-card input,
+.form-card select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-size: 15px;
+    outline: none;
+    transition: .25s;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .15);
+}
+
+.form-card button {
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.form-card button:hover {
+    background: #1d4ed8;
+}
+
+.form-card button:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}
+
+
+/* ===========================
+   RECEIPT
+=========================== */
+
+.receipt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.receipt span {
+    display: block;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.receipt b {
+    font-size: 18px;
+}
+
+
+/* ===========================
+   TICKET
+=========================== */
+
+.ticket-card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .08);
+    margin-bottom: 30px;
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.ticket-header h2 {
+    font-size: 22px;
+}
+
+.ticket-header p {
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.ticket-badge {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ticket-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.ticket-item {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.ticket-item span {
+    display: block;
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.ticket-item b {
+    font-size: 15px;
+}
+
+
+/* ===========================
+   TABLE
+=========================== */
+
+.table-card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .08);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.table-header h2 {
+    font-size: 22px;
+}
+
+.table-header p {
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+.count-badge {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f8fafc;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+td {
+    padding: 18px 15px;
+    border-top: 1px solid #eef2f7;
+    font-size: 15px;
+}
+
+tbody tr {
+    transition: .25s;
+}
+
+tbody tr:hover {
+    background: #f9fafb;
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1100px) {
+    .availability-grid {
+        grid-template-columns: 1fr;
+    }
+    .forms {
+        grid-template-columns: 1fr;
+    }
+    .ticket-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:768px) {
+    .summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .ticket-grid {
+        grid-template-columns: 1fr;
+    }
+    .receipt {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
